@@ -1,6 +1,6 @@
 # Tips
-* Cable-有分类排除专线线路
-* Direct-国内直连规则
+* Cable-基础分流
+* Sort-高级分流（有分类排除专线线路
 
 #### Sub-Store 脚本操作 不联网
 * [rename.js](https://raw.githubusercontent.com/Baklng/Openclash/refs/heads/main/rename.js)
