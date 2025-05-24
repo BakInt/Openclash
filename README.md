@@ -1,6 +1,6 @@
 # Tips
 * Cable-完美简洁分流
-* Sort-高级分流（有分类排除专线线路.暂停更新
+* Sort-完美简洁分流（有分类排除专线线路.暂停更新
 
 #### Sub-Store 脚本操作 不联网
 * [Rename.js](https://raw.githubusercontent.com/Baklng/Openclash/refs/heads/main/Rename.js)
