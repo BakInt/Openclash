@@ -8,3 +8,5 @@
 
 ⚠️注意：自用规则备份，未经允许禁止传播！！！
 
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=BakInt/Openclash&type=Timeline)](https://www.star-history.com/#BakInt/Openclash&Timeline)
