@@ -6,8 +6,8 @@
 
 proxy-providers:
 
-  牛逼:
-    url: "http://192.168.31.1:3008/T3B9dgzBzdRbBF8Aqx7P/download/NB?target=Clash&includeUnsupportedProxy=true"
+  机场名称:
+    url: "[机场订阅地址]"
     type: http
     interval: 86400
     health-check:
@@ -16,65 +16,19 @@ proxy-providers:
       interval: 180
     proxy: 直连 
     
-  OuO:
-    url: "http://192.168.31.1:3008/T3B9dgzBzdRbBF8Aqx7P/download/OuO?target=Clash"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 180
-    proxy: 直连  
-    
-#  Built:
-#    url: "http://192.168.31.1:3008/T3B9dgzBzdRbBF8Aqx7P/download/%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9?#target=Clash&includeUnsupportedProxy=true"
-#    type: http
-#    interval: 86400
-#    health-check:
-#      enable: true
-#      url: https://www.gstatic.com/generate_204
-#      interval: 180
-#    proxy: 直连    
 
-  赔钱:
-    url: "http://192.168.31.1:3008/T3B9dgzBzdRbBF8Aqx7P/download/%E8%B5%94%E9%92%B1%E6%9C%BA%E5%9C%BA?target=Clash"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 180
-    proxy: 直连    
-    
-  月抛:
-    url: "http://192.168.31.1:3008/T3B9dgzBzdRbBF8Aqx7P/download/collection/Moonlight_Airport?target=Clash&includeUnsupportedProxy=true"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 180
-    proxy: 直连   
 
-# 节点信息
 proxies:
-  - name: "中转家宽 01"
-    dialer-proxy: 香港-故转
-    type: ss
-    server: "210.109.205.7"
-    port: 27271
-    cipher: "2022-blake3-aes-128-gcm"
-    password: "UETm2mAIRiCaVJuIe1t0cA=="
-    udp: true
 
-#  - name: "中转家宽 02"
-#    dialer-proxy: 美国-故转
-#    type: socks5
-#    server: "ax.a0b.com"
-#    port: 10066
-#    username: "oXceQ1rG7j"
-#    password: "b8CDiIFCOq"
-#    udp: true
+  # # 链式代理
+  # - name: "中转家宽 01"
+  #   dialer-proxy: 香港-故转
+  #   type: ss
+  #   server: "[节点IP]"
+  #   port: [节点端口]
+  #   cipher: "[节点加密方式]"
+  #   password: "[节点密码]"
+  #   udp: true
 
 
   - {name: 直连, type: direct}
@@ -179,7 +133,7 @@ proxy-groups:
   - name: 所有-智选
     type: smart
     include-all: true
-    policy-priority: ".*牛逼.*:0.5;.*赔钱.*:0.5;.*无界云.*:0.5;.*香港.*:1.5;.*台湾.*:1.5"
+    policy-priority: ".*香港.*:1.5;.*台湾.*:1.5"
     uselightgbm: true
     collectdata: true
     health-check: 
@@ -208,7 +162,6 @@ proxy-groups:
   - name: 香港-智选
     type: smart
     include-all: true
-    policy-priority: ".*牛逼.*:0.5;.*赔钱.*:0.5;.*无界云.*:0.5"
     uselightgbm: true
     collectdata: true
     health-check: 
@@ -235,7 +188,6 @@ proxy-groups:
   - name: 台湾-智选
     type: smart
     include-all: true
-    policy-priority: ".*牛逼.*:0.5;.*赔钱.*:0.5;.*无界云.*:0.5"
     uselightgbm: true
     collectdata: true
     health-check: 
@@ -262,7 +214,6 @@ proxy-groups:
   - name: 日本-智选
     type: smart
     include-all: true
-    policy-priority: ".*牛逼.*:0.5;.*赔钱.*:0.5;.*无界云.*:0.5"
     uselightgbm: true
     collectdata: true
     health-check: 
@@ -289,7 +240,6 @@ proxy-groups:
   - name: 新加坡-智选
     type: smart
     include-all: true
-    policy-priority: ".*牛逼.*:0.5;.*赔钱.*:0.5;.*无界云.*:0.5"
     uselightgbm: true
     collectdata: true
     health-check: 
@@ -316,7 +266,6 @@ proxy-groups:
   - name: 美国-智选
     type: smart
     include-all: true
-    policy-priority: ".*牛逼.*:0.5;.*赔钱.*:0.5;.*无界云.*:0.5"
     uselightgbm: true
     collectdata: true
     health-check: 
@@ -341,7 +290,6 @@ proxy-groups:
     type: select
     include-all: true
     filter: "^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
-
   - name: 其他-智选
     type: smart
     include-all: true
@@ -370,7 +318,7 @@ proxy-groups:
       tolerance: 0
     strategy: sticky-sessions
     interval: 10
-    filter: "(?=.*(牛逼|赔钱|无界云|月抛)).*$"
+    filter: "(?=.*(月抛)).*$"
     
   # 家宽落地
   - name: 家宽-手选
