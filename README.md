@@ -7,4 +7,4 @@
 * [Rename.js](https://raw.githubusercontent.com/Bakint/Openclash/refs/heads/main/Rename.js)
 
 
-⚠️注意：自用规则备份，未经允许禁止传播！！！
+⚠️注意：自用规则分享，未经允许禁止传播！！！
