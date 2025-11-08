@@ -1,5 +1,5 @@
 # Tips
-* 【👍 推荐】Yaml - 完美简洁分流 + [Zashboard](https://raw.githubusercontent.com/Bakint/Openclash/refs/heads/main/Zashboard-settings.json) - 配置文件
+* 【👍 推荐】Yaml - 完美简洁分流 + [Zashboard](https://raw.githubusercontent.com/BakInt/Openclash/refs/heads/main/zashboard-settings.json) - 配置文件
 * Cable - 完美简洁分流
 * Sort - 完美简洁分流（有分类排除专线线路.暂停更新
 
